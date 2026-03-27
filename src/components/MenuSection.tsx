@@ -22,10 +22,10 @@ const menuItems: MenuItem[] = [
     tags: ["Popular", "Casero"],
   },
   {
-    name: "Pollo acebolado con macarrão cremoso",
-    description: "Tierno pollo acebolado acompañado de fideos cremosos hechos al momento.",
-    price: "22.000 Gs",
-    image: food3,
+    name: "Milanesa de pollo con ensalada de lechuga",
+    description: "Crujiente milanesa de pollo acompañada de fresca ensalada de lechuga y tomate.",
+    price: "15.000 Gs",
+    image: food5,
     tags: ["Recomendado", "Casero"],
   },
 ];
