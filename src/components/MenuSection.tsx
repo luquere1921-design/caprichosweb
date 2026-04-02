@@ -26,7 +26,10 @@ export const MenuSection = () => {
           <div className="text-center mb-14">
             <p className="font-display text-2xl text-primary mb-1">Menú del día</p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">
-              Platos que te van a enamorar
+              Almuerzos caseros desde 15.000 Gs 🍽️
+              <p className="text-muted-foreground mt-2">
+  Pedí rápido por WhatsApp y recibí en minutos 🚀
+</p>
             </h2>
           </div>
         </ScrollReveal>
@@ -80,7 +83,7 @@ export const MenuSection = () => {
                     <span className="text-2xl font-bold text-primary font-display">{item.price}</span>
                     <a
                       href={`https://wa.me/595961939929?text=${encodeURIComponent(
-  `Hola! Quiero pedir: ${item.name} - ${item.price}`
+  `pedir ahora  ${item.price}`
 )}`}
                       target="_blank"
                       rel="noopener noreferrer"

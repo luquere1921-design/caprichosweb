@@ -21,7 +21,7 @@
     "name": "Asado a la olla",
     "description": "Asado de carne cocido lentamente en una olla con verduras y especias.",
     "price": "25.000",
-    "image": "food-6.png",  
+    "image": "food-3.png", 
     "tags": ["Popular","Casero"],
     "available": true,
     "offer": false
