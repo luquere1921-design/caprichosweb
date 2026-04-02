@@ -1,18 +1,13 @@
 import caprichosLogo from "@/assets/caprichos-logo.png";
-import food1 from "@/assets/food-1.png";
-import food2 from "@/assets/food-2.png";
 import food3 from "@/assets/food-3.png";
 import food4 from "@/assets/food-4.png";
 import food5 from "@/assets/food-5.png";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 const images = [
-  { src: food1, alt: "Plato casero con fideos y carne" },
-  { src: food2, alt: "Puchero de chancho tradicional" },
-  { src: food3, alt: "Pollo acebolado con fideos" },
-  { src: food4, alt: "Almuerzo casero completo" },
-  { src: food5, alt: "Mesa servida con platos caseros" },
-  { src: caprichosLogo, alt: "Logo de Caprichos de la abuela" },
+  { src: "/food-1.png", alt: "Plato 1" },
+  { src: "/food-2.png", alt: "Plato 2" },
+  { src: "/food-3.png", alt: "Plato 3" }
 ];
 
 export const GallerySection = () => (

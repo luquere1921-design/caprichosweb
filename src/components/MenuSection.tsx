@@ -1,5 +1,4 @@
-import food2 from "@/assets/food-2.png";
-import food3 from "@/assets/food-3.png";
+import menu from "@/data/menu.json";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { MessageCircle, Flame, Heart } from "lucide-react";
 
@@ -12,23 +11,6 @@ interface MenuItem {
   image: string;
   tags: string[];
 }
-
-const menuItems: MenuItem[] = [
-  {
-    name: "Puchero de chancho",
-    description: "Tradicional puchero de chancho con verduras frescas y yuca, cocido a fuego lento para un sabor inigualable.",
-    price: "25.000 Gs",
-    image: food2,
-    tags: ["Popular", "Casero"],
-  },
-  {
-    name: "Milanesa de pollo con ensalada de lechuga",
-    description: "Crujiente milanesa de pollo acompañada de fresca ensalada de lechuga y tomate.",
-    price: "15.000 Gs",
-    image: food5,
-    tags: ["Recomendado", "Casero"],
-  },
-];
 
 const tagStyles: Record<string, string> = {
   Popular: "bg-primary/15 text-primary",
@@ -50,30 +32,45 @@ export const MenuSection = () => {
         </ScrollReveal>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {menuItems.map((item, i) => (
+          {menu.filter(item => item.available) 
+          .map((item, i) => (
             <ScrollReveal key={item.name} delay={i * 120}>
               <div className="group bg-card rounded-2xl overflow-hidden shadow-md shadow-foreground/5 hover:shadow-xl hover:shadow-foreground/10 transition-all duration-300 hover:-translate-y-1">
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
-                  <img
-                    src={item.image}
+                  {!item.available && (
+  <div className="absolute inset-0 bg-black/70 flex items-center justify-center z-10">
+    <span className="text-white text-lg font-bold">AGOTADO</span>
+  </div>
+)}
+                  <img src={item.image}
                     alt={item.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
+
                   <div className="absolute top-3 left-3 flex gap-2">
                     {item.tags.map((tag) => (
                       <span
                         key={tag}
-                        className={`inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-lg backdrop-blur-sm ${tagStyles[tag] || "bg-muted text-muted-foreground"}`}
-                      >
-                        {tag === "Popular" && <Flame className="w-3 h-3" />}
-                        {tag === "Recomendado" && <Heart className="w-3 h-3" />}
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                        className={`inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-lg backdrop-blur-sm ${
+                          tagStyles[tag] || "bg-muted text-muted-foreground"
+                      }`}
+                >
+                    {tag === "Popular" && <Flame className="w-3 h-3" />}
+                    {tag === "Recomendado" && <Heart className="w-3 h-3" />}
+                    {tag}
+                    {item.offer && (
+  <span className="absolute bottom-3 right-3 bg-green-500 text-white text-xs px-2 py-1 rounded">
+    OFERTA
+  </span>
+)}
+                  </span>
+              ))}
+            </div>
+            </div> 
+ 
+
 
                 {/* Content */}
                 <div className="p-6">
@@ -82,7 +79,9 @@ export const MenuSection = () => {
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold text-primary font-display">{item.price}</span>
                     <a
-                      href={`${WHATSAPP_URL}${encodeURIComponent(item.name)}`}
+                      href={`https://wa.me/595961939929?text=${encodeURIComponent(
+  `Hola! Quiero pedir: ${item.name} - ${item.price}`
+)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-5 py-2.5 rounded-xl text-sm transition-all duration-200 hover:scale-[1.04] active:scale-[0.97] shadow-sm"

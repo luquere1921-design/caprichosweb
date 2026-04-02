@@ -1,0 +1,38 @@
+[
+{
+    "name": "Milanesa con papas",
+    "description": "Milanesa de carne acompañada de fideos con salsa de tomate casera.",
+    "price": "22.000",
+    "image": "food-1.png",
+    "tags": ["Popular","Casero"],
+    "available": true,
+    "offer": false
+    },
+    {
+    "name": "ensalada de poroto",
+    "description": "Ensalada fresca de porotos con tortilla y limón.",
+    "price": "18.000",
+    "image": "food-2.png",
+    "tags": ["Popular","Casero"],
+    "available": true,
+    "offer": true
+    },
+    {
+    "name": "Asado a la olla",
+    "description": "Asado de carne cocido lentamente en una olla con verduras y especias.",
+    "price": "25.000",
+    "image": "food-3.png",
+    "tags": ["Popular","Casero"],
+    "available": true,
+    "offer": false
+    },
+    {
+    "name": "Pollo al horno con papas",
+    "description": "Pollo marinado al horno acompañado de papas doradas.",
+    "price": "20.000",
+    "image": "food-4.png",
+    "tags": ["Popular","Casero"],
+    "available": true,
+    "offer": false
+}
+]
