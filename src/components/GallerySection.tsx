@@ -9,7 +9,7 @@ const images = [
   { src: "/food-2.png", alt: "Plato 2" },
   { src: "/food-3.png", alt: "Plato 3" },
   { src: "/logo-caprichos.png", alt: "logo 1" },
-  { src: "/comedor caprichos.png", alt: "logo 2" }
+  { src: "/comedor-caprichos.png", alt: "logo 2" }
 ];
 
 export const GallerySection = () => (
