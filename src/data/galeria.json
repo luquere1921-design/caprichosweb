@@ -14,5 +14,15 @@
     { 
         "image": "food-4.png",
         "alt": "postre"
-    }
+    },
+    {
+        "image": "logo-caprichos.png",
+        "alt": "logo"
+    },
+    {
+        "image": "comedor-caprichos.png",
+        "alt": "comedor"
+    }   
+
+
 ]
