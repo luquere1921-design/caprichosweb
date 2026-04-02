@@ -12,7 +12,7 @@
     "name": "ensalada de poroto",
     "description": "Ensalada fresca de porotos con tortilla y limón.",
     "price": "18.000",
-    "image": "food-2.png",
+    "image": "food-5.png",
     "tags": ["Popular","Casero"],
     "available": true,
     "offer": true
