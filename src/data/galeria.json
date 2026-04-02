@@ -1,0 +1,18 @@
+[
+    {
+        "image": "food-1.png",
+        "alt": "Milanesa"
+    },
+    {
+        "image": "food-2.png",
+        "alt": "Ensalada"
+    },
+    {
+        "image": "food-3.png",
+        "alt": "Asado"
+    },
+    { 
+        "image": "food-4.png",
+        "alt": "postre"
+    }
+]

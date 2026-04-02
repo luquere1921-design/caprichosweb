@@ -1,16 +1,11 @@
+import galeria from "@/data/galeria.json";
 import caprichosLogo from "@/assets/caprichos-logo.png";
 import food3 from "@/assets/food-3.png";
 import food4 from "@/assets/food-4.png";
 import food5 from "@/assets/food-5.png";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
-const images = [
-  { src: "/food-1.png", alt: "Plato 1" },
-  { src: "/food-2.png", alt: "Plato 2" },
-  { src: "/food-3.png", alt: "Plato 3" },
-  { src: "/logo-caprichos.png", alt: "logo 1" },
-  { src: "/comedor-caprichos.png", alt: "logo 2" }
-];
+
 
 export const GallerySection = () => (
  <>
@@ -18,7 +13,7 @@ export const GallerySection = () => (
       src={caprichosLogo} 
       alt="Logo de Caprichos de la abuela" 
       className="w-32 mx-auto mb-6"
-    />
+    /> 
 
   <section id="galeria" className="py-20 md:py-28 bg-warm-cream">
     <div className="container">
@@ -30,7 +25,7 @@ export const GallerySection = () => (
       </ScrollReveal>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-4xl mx-auto">
-        {images.map((img, i) => (
+        {galeria.map((img, i) => (
           <ScrollReveal
             key={img.alt}
             delay={i * 80}
@@ -38,7 +33,7 @@ export const GallerySection = () => (
           >
             <div className="group relative overflow-hidden rounded-2xl shadow-sm shadow-foreground/5 aspect-square">
               <img
-                src={img.src}
+                src={`/${img.image}`}
                 alt={img.alt}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
