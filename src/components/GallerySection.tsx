@@ -29,13 +29,13 @@ export const GallerySection = () => (
           <ScrollReveal
             key={img.alt}
             delay={i * 80}
-            className=""
+            className="w-full h-full object-cover"
           >
             <div className="group relative overflow-hidden rounded-2xl shadow-sm shadow-foreground/5 aspect-square">
               <img
                 src={`/${img.image}`}
                 alt={img.alt}
-                className=""
+                className="w-full h-full object-cover"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-300" />
