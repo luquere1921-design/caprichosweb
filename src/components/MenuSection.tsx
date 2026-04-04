@@ -26,11 +26,12 @@ export const MenuSection = () => {
           <div className="text-center mb-14">
             <p className="font-display text-2xl text-primary mb-1">Menú del día</p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">
-              Almuerzos caseros desde 15.000 Gs 🍽️
+              Almuerzos caseros desde 15.000 Gs 🍽️</h2>
+
               <p className="text-muted-foreground mt-2">
   Pedí rápido por WhatsApp y recibí en minutos 🚀
 </p>
-            </h2>
+
           </div>
         </ScrollReveal>
 
@@ -41,12 +42,14 @@ export const MenuSection = () => {
               <div className="group bg-card rounded-2xl overflow-hidden shadow-md hover:scale-105 hover:shadow-xl transition duration-300">
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
+                  {/* AGOTADO */ }
                   {!item.available && (
   <div className="absolute inset-0 bg-black/70 flex items-center justify-center z-10">
     <span className="text-white text-lg font-bold">AGOTADO</span>
   </div>
 )}
-                  <img src={item.image}
+                  <img 
+                    src={`/${item.image}`}
                     alt={item.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
@@ -63,6 +66,7 @@ export const MenuSection = () => {
                     {tag === "Popular" && <Flame className="w-3 h-3" />}
                     {tag === "Recomendado" && <Heart className="w-3 h-3" />}
                     {tag}
+                    {/* OFERTA */ }
                     {item.offer && (
   <span className="absolute bottom-3 right-3 bg-green-500 text-white text-xs px-2 py-1 rounded">
     OFERTA
@@ -83,7 +87,7 @@ export const MenuSection = () => {
                     <span className="text-2xl font-bold text-primary font-display"> Gs {item.price}</span>
                     <a
                       href={`https://wa.me/595961939929?text=${encodeURIComponent(
-  `pedir ahora  ${item.price}`
+  `Hola! Quiero pedir ${item.name} - Gs ${item.price}`
 )}`}
                       target="_blank"
                       rel="noopener noreferrer"
