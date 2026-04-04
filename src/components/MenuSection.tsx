@@ -38,7 +38,7 @@ export const MenuSection = () => {
           {menu.filter(item => item.available) 
           .map((item, i) => (
             <ScrollReveal key={item.name} delay={i * 120}>
-              <div className="group bg-card rounded-2xl overflow-hidden shadow-md shadow-foreground/5 hover:shadow-xl hover:shadow-foreground/10 transition-all duration-300 hover:-translate-y-1">
+              <div className="group bg-card rounded-2xl overflow-hidden shadow-md hover:scale-105 hover:shadow-xl transition duration-300">
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
                   {!item.available && (
@@ -80,7 +80,7 @@ export const MenuSection = () => {
                   <h3 className="text-lg font-bold text-foreground mb-2 leading-snug">{item.name}</h3>
                   <p className="text-sm text-muted-foreground mb-4 text-pretty">{item.description}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-primary font-display">{item.price}</span>
+                    <span className="text-2xl font-bold text-primary font-display"> Gs {item.price}</span>
                     <a
                       href={`https://wa.me/595961939929?text=${encodeURIComponent(
   `pedir ahora  ${item.price}`
