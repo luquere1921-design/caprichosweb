@@ -50,7 +50,7 @@ export const HeroSection = () => {
 
         <ScrollReveal delay={300}>
           <p className="text-lg md:text-xl text-primary-foreground/75 max-w-xl mx-auto mb-10 text-pretty">
-            Comida casera deliciosa, económica y con todo el cariño — todos los días en Asunción.
+            Comida casera deliciosa, económica y con todo el cariño todos los días.
           </p>
         </ScrollReveal>
 
