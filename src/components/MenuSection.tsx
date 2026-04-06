@@ -62,8 +62,7 @@ export const MenuSection = () => {
         </ScrollReveal>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {menu.filter(item => item.available) 
-          .map((item, i) => (
+          {menu.map((item, i) => (
             <ScrollReveal key={item.name} delay={i * 120}>
               <div className="group bg-card rounded-2xl overflow-hidden shadow-md hover:scale-105 hover:shadow-xl transition duration-300">
                 </div>

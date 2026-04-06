@@ -4,7 +4,7 @@
     "description": "Milanesa de carne acompañada de fideos con salsa de tomate casera.",
     "price": "22.000",
     "image": "food-1.png",
-    "tags": ["Popular","Casero"],
+    "tags": ["Casero"],
     "available": true,
     "offer": false
     },
@@ -13,9 +13,9 @@
     "description": "Puchero de ozobuco con verduras y especias.",
     "price": "18.000",
     "image": "food-5.png",
-    "tags": ["Popular","Casero"],
+    "tags": ["Popular"],
     "available": true,
-    "offer": false
+    "offer": true
     },
     {
     "name": "Asado a la olla",
