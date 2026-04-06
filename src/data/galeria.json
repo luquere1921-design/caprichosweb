@@ -30,8 +30,11 @@
      {
         "image": "milanesa.jpg",
         "alt": "comida"
+    },
+     {
+        "image": "pizarra.jpg",
+        "alt": "pizarra"
     }
-
 
 
 ]
