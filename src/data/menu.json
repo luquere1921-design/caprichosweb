@@ -6,7 +6,7 @@
     "image": "food-1.png",
     "tags": ["Popular","Casero"],
     "available": true,
-    "offer": false
+    "offer": true
     },
     {
     "name": "ensalada de poroto",

@@ -40,6 +40,8 @@ export const MenuSection = () => {
           .map((item, i) => (
             <ScrollReveal key={item.name} delay={i * 120}>
               <div className="group bg-card rounded-2xl overflow-hidden shadow-md hover:scale-105 hover:shadow-xl transition duration-300">
+                </div>
+
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
                   {/* AGOTADO */ }
@@ -66,16 +68,16 @@ export const MenuSection = () => {
                     {tag === "Popular" && <Flame className="w-3 h-3" />}
                     {tag === "Recomendado" && <Heart className="w-3 h-3" />}
                     {tag}
-                    {/* OFERTA */ }
-                    {item.offer && (
-  <span className="absolute bottom-3 right-3 bg-green-500 text-white text-xs px-2 py-1 rounded">
-    OFERTA
-  </span>
-)}
+                    
                   </span>
               ))}
             </div>
+                    
+                    {item.offer && (
+   <div className="absolute bottom-3 right-3 bg-green-500 text-white text-xs px-2 py-1 rounded"> OFERTA
             </div> 
+            
+                    )}  
  
 
 
