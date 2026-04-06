@@ -24,7 +24,7 @@
     "image": "food-3.png", 
     "tags": ["Popular","Casero"],
     "available": true,
-    "offer": false
+    "offer": true
     },
     {
     "name": "Pollo al horno con papas",
@@ -33,6 +33,6 @@
     "image": "food-4.png",
     "tags": ["Popular","Casero"],
     "available": true,
-    "offer": false
+    "offer": true
 }
 ]
