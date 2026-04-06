@@ -1,3 +1,4 @@
+import { Facebook, Instagram, MessageCircle } from "lucide-react";
 import { MapPin, Phone, Clock } from "lucide-react";
 
 export const Footer = () => (
@@ -32,6 +33,42 @@ export const Footer = () => (
           <p className="text-sm ml-6">Sábado y Domingo: Cerrado</p>
         </div>
       </div>
+
+       {/* 🔥 REDES SOCIALES */}
+      <div className="flex justify-center gap-4 mb-6">
+        
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/595961939929"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 text-white p-3 rounded-full hover:scale-110 transition"
+        >
+          <MessageCircle size={20} />
+        </a>
+
+        {/* Instagram */}
+        <a
+          href="https://instagram.com/caprichosdelabuela"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-pink-500 text-white p-3 rounded-full hover:scale-110 transition"
+        >
+          <Instagram size={20} />
+        </a>
+
+        {/* Facebook */}
+        <a
+          href="https://facebook.com/caprichosdelabuela"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-blue-600 text-white p-3 rounded-full hover:scale-110 transition"
+        >
+          <Facebook size={20} />
+        </a>
+
+      </div>
+       
 
       <div className="border-t border-primary-foreground/10 pt-6 text-center">
         <p className="text-xs text-primary-foreground/40">
