@@ -72,9 +72,9 @@ export const MenuSection = () => {
 
                   {/* AGOTADO */ }
                   {!item.available && (
-  <div className="absolute inset-0 bg-black/70 flex items-center justify-center z-10">
-    <span className="text-white text-lg font-bold">AGOTADO</span>
-  </div>
+                      <div className="absolute top-3 right-3 bg-red-500 text-white text-xs px-3 py-1 rounded z-10">
+                          AGOTADO
+                       </div>
 )}
                   <img 
                     src={`/${item.image}`}
@@ -119,10 +119,14 @@ export const MenuSection = () => {
 )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-5 py-2.5 rounded-xl text-sm transition-all duration-200 hover:scale-[1.04] active:scale-[0.97] shadow-sm"
+                      className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm transition-all duration-200 ${
+    item.available
+      ? "bg-primary text-primary-foreground hover:scale-[1.04]"
+      : "bg-gray-400 text-white cursor-not-allowed"
+  }`}
                     >
                       <MessageCircle className="w-4 h-4" />
-                      Pedir
+                       {item.available ? "Pedir" : "No disponible"}
                     </a>
                   </div>
                 </div>
