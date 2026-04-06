@@ -101,9 +101,10 @@ export const MenuSection = () => {
                      <img 
                     src={`/${item.image}`}
                     alt={item.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
+                   className={`w-full h-full object-cover transition-all duration-500 ${
+    !item.available ? "grayscale opacity-50" : "group-hover:scale-110"
+  }`}
+/>
                   </div>
 
 
