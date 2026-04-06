@@ -64,11 +64,11 @@ export const MenuSection = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {menu.map((item, i) => (
             <ScrollReveal key={item.name} delay={i * 120}>
-              <div className="group bg-card rounded-2xl overflow-hidden shadow-md hover:scale-105 hover:shadow-xl transition duration-300">
-                </div>
+              <div className="group bg-card rounded-2xl overflow-hidden shadow-md hover:scale-105 hover:shadow-xl transition duration-300 flex flex-col h-full">
 
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
+                  </div>
 
                   {/* AGOTADO */ }
                   {!item.available && (
@@ -108,14 +108,15 @@ export const MenuSection = () => {
 
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-lg font-bold text-foreground mb-2 leading-snug">{item.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-4 text-pretty">{item.description}</p>
-                  <div className="flex items-center justify-between">
+                  <p className="text-sm text-muted-foreground mb-4 text-pretty flex-grow">{item.description}</p>
+
+                  <div className="flex items-center justify-between mt-auto">
                     <span className="text-2xl font-bold text-primary font-display"> Gs {item.price}</span>
                     <a
                       href={`https://wa.me/595961939929?text=${encodeURIComponent(
-  `Hola! Quiero pedir ${item.name} - Gs ${item.price}`
+                        `Hola! Quiero pedir ${item.name} - Gs ${item.price}`
 )}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -134,7 +135,8 @@ export const MenuSection = () => {
             </ScrollReveal>
           ))}
         </div>
-      </div>
+        </div>
+        
     </section>
   );
 };
