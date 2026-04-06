@@ -36,8 +36,8 @@ export const MenuSection = () => {
           price: item.price,
           image: item.image,
           tags: item.tags ? item.tags.split(",") : [],
-          available: item.available === "true",
-          offer: item.offer === "true",
+          available: item.available?.toString()?.toLowerCase() === "true",
+          offer: item.offer?.toString()?.toLowerCase()  === "true",
         }));
         setMenu(formatted);
       });
