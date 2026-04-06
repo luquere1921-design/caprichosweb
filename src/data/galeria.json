@@ -26,7 +26,12 @@
     {
         "image": "tallarin.png",
         "alt": "comida"
-    }   
+    },
+     {
+        "image": "milanesa.jpg",
+        "alt": "comida"
+    }
+
 
 
 ]

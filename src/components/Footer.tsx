@@ -61,7 +61,7 @@ export const Footer = () => (
 
         {/* Facebook */}
         <a
-          href="https://facebook.com/caprichosdelabuela"
+          href="https://www.facebook.com/profile.php?id=61555724555823"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-blue-600 text-white p-3 rounded-full hover:scale-110 transition"
