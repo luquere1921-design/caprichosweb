@@ -1,4 +1,4 @@
-import menu from "@/data/menu.json";
+import { useEffect, useState } from "react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { MessageCircle, Flame, Heart } from "lucide-react";
 
@@ -10,6 +10,8 @@ interface MenuItem {
   price: string;
   image: string;
   tags: string[];
+  available: boolean;
+  offer: boolean; 
 }
 
 const tagStyles: Record<string, string> = {
@@ -19,9 +21,33 @@ const tagStyles: Record<string, string> = {
 };
 
 export const MenuSection = () => {
+
+     // 🔥 ESTADO
+  const [menu, setMenu] = useState<MenuItem[]>([]); 
+
+   // 🔥 CONEXIÓN GOOGLE SHEETS
+  useEffect(() => {
+    fetch("https://sheetdb.io/api/v1/2mp07f9dl3rmv")
+      .then(res => res.json())
+      .then(data => {
+        const formatted = data.map((item: any) => ({
+          name: item.name,
+          description: item.description,
+          price: item.price,
+          image: item.image,
+          tags: item.tags ? item.tags.split(",") : [],
+          available: item.available === "true",
+          offer: item.offer === "true",
+        }));
+        setMenu(formatted);
+      });
+  }, []);
+
   return (
+
     <section id="menu" className="py-20 md:py-28 bg-warm-cream">
       <div className="container">
+
         <ScrollReveal>
           <div className="text-center mb-14">
             <p className="font-display text-2xl text-primary mb-1">Menú del día</p>
@@ -44,6 +70,7 @@ export const MenuSection = () => {
 
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
+
                   {/* AGOTADO */ }
                   {!item.available && (
   <div className="absolute inset-0 bg-black/70 flex items-center justify-center z-10">

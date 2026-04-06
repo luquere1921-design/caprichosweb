@@ -14,8 +14,8 @@
     "price": "18.000",
     "image": "food-5.png",
     "tags": ["Popular","Casero"],
-    "available": false,
-    "offer": true
+    "available": true,
+    "offer": false
     },
     {
     "name": "Asado a la olla",
