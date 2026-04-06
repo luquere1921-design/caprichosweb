@@ -6,15 +6,15 @@
     "image": "food-1.png",
     "tags": ["Popular","Casero"],
     "available": true,
-    "offer": true
+    "offer": false
     },
     {
-    "name": "ensalada de poroto",
-    "description": "Ensalada fresca de porotos con tortilla y limón.",
+    "name": "puchero de ozobuco",
+    "description": "Puchero de ozobuco con verduras y especias.",
     "price": "18.000",
     "image": "food-5.png",
     "tags": ["Popular","Casero"],
-    "available": true,
+    "available": false,
     "offer": true
     },
     {
@@ -24,7 +24,7 @@
     "image": "food-3.png", 
     "tags": ["Popular","Casero"],
     "available": true,
-    "offer": true
+    "offer": false
     },
     {
     "name": "Pollo al horno con papas",
@@ -33,6 +33,6 @@
     "image": "food-4.png",
     "tags": ["Popular","Casero"],
     "available": true,
-    "offer": true
+    "offer": false
 }
 ]
