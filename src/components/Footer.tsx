@@ -43,6 +43,7 @@ export const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-500 text-white p-3 rounded-full hover:scale-110 transition"
+          title="WhatsApp"
         >
           <MessageCircle size={20} />
         </a>
@@ -53,6 +54,7 @@ export const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
           className="bg-pink-500 text-white p-3 rounded-full hover:scale-110 transition"
+          title="Instagram"
         >
           <Instagram size={20} />
         </a>
@@ -63,6 +65,7 @@ export const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
           className="bg-blue-600 text-white p-3 rounded-full hover:scale-110 transition"
+          title="Facebook"
         >
           <Facebook size={20} />
         </a>
