@@ -9,19 +9,19 @@
     "offer": false
     },
     {
-    "name": "puchero de ozobuco",
-    "description": "Puchero de ozobuco con verduras y especias.",
+    "name": "Marinera de carne ",
+    "description": "Marinera de carne con spaguetti a la manteca.",
     "price": "18.000",
-    "image": "food-5.png",
+    "image": "marinera.jpg",
     "tags": ["Popular"],
     "available": true,
     "offer": true
     },
     {
-    "name": "Asado a la olla",
-    "description": "Asado de carne cocido lentamente en una olla con verduras y especias.",
-    "price": "25.000",
-    "image": "food-3.png", 
+    "name": "Guiso de carne",
+    "description": "Guiso de fideos con carne y especias.",
+    "price": "20.000",
+    "image": "guiso.jpg", 
     "tags": ["Popular","Casero"],
     "available": true,
     "offer": false
